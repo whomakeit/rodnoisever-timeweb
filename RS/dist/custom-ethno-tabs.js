@@ -17,6 +17,13 @@
   const FOOTER_CREDIT_ID = "6a0f1cac15c8c40ffd1467c3";
   const FOOTER_COPY_ID = "6a072f5e0c642388577880b7";
   const FOOTER_BG_ID = "6a072dec59463c902286e8da";
+  const TABLET_FOOTER_SHIFT = 100;
+  const DESKTOP_FOOTER_HEIGHT_RATIO = 0.5;
+  const DESKTOP_FOOTER_CONTENT_SHIFT = -140;
+  const FOOTER_DECORATION_IDS = [
+    FOOTER_BG_ID,
+    "6a0aeeb8889be14d56a22e54",
+  ];
   const FOOTER_SOCIAL_BG_IDS = [
     "6a0dbd8f44bd48ffb052c771",
     "6a0dbdccf53dd5b8e8c09e39",
@@ -27,6 +34,7 @@
   ];
   const HIDDEN_DECORATION_IDS = [
     "6a0da96cbcac38ba2d39d67e",
+    "6a0b1f9774006e1df1794322",
   ];
   const FOOTER_PARTNERS_ID = "rodnoi-footer-partners";
   const PREMIER_LOGO_URL = "https://i-p.rmcdn.net/5c8d09396049ea61eff81239/6339958/image-4ff0e154-6555-4d24-bada-8eb59ca52c85.png?w=194&cX=5&cY=0&cW=432&cH=94";
@@ -187,7 +195,7 @@
 
   function getCardTopShift() {
     if (window.innerWidth <= 600) return -123.2;
-    if (window.innerWidth <= TABLET_MAX_WIDTH) return -120;
+    if (window.innerWidth <= TABLET_MAX_WIDTH) return -100;
     return -103.2;
   }
 
@@ -330,6 +338,74 @@
     });
   }
 
+  function setFooterBackgroundHeight(footerBg) {
+    if (!footerBg) return;
+
+    if (!footerBg.dataset.rodnoiOriginalHeight) {
+      footerBg.dataset.rodnoiOriginalHeight = footerBg.style.height || `${footerBg.offsetHeight}px`;
+    }
+
+    const originalHeight = parseFloat(footerBg.dataset.rodnoiOriginalHeight);
+    if (!Number.isFinite(originalHeight)) return;
+
+    const ratio = window.innerWidth > TABLET_MAX_WIDTH
+      ? DESKTOP_FOOTER_HEIGHT_RATIO
+      : 1;
+    footerBg.style.height = `${originalHeight * ratio}px`;
+  }
+
+  function setFooterPageHeight(footerBg) {
+    if (!footerBg) return;
+
+    const pageContainer = footerBg.closest(".page-content-container");
+    if (!pageContainer) return;
+
+    if (!pageContainer.dataset.rodnoiOriginalHeight) {
+      pageContainer.dataset.rodnoiOriginalHeight = pageContainer.style.height || `${pageContainer.offsetHeight}px`;
+    }
+    if (!document.body.dataset.rodnoiOriginalHeight) {
+      document.body.dataset.rodnoiOriginalHeight = document.body.style.height || `${document.body.offsetHeight}px`;
+    }
+
+    const originalHeight = parseFloat(pageContainer.dataset.rodnoiOriginalHeight);
+    const originalBodyHeight = parseFloat(document.body.dataset.rodnoiOriginalHeight);
+    if (!Number.isFinite(originalHeight) || !Number.isFinite(originalBodyHeight)) return;
+
+    if (window.innerWidth > TABLET_MAX_WIDTH) {
+      const targetHeight = footerBg.offsetTop + footerBg.offsetHeight;
+      pageContainer.style.height = `${targetHeight}px`;
+      document.body.style.height = `${targetHeight}px`;
+      return;
+    }
+
+    pageContainer.style.height = `${originalHeight}px`;
+    document.body.style.height = `${originalBodyHeight}px`;
+  }
+
+  function getTabletFooterShift() {
+    return window.innerWidth > 600 && window.innerWidth <= TABLET_MAX_WIDTH
+      ? TABLET_FOOTER_SHIFT
+      : 0;
+  }
+
+  function setTopOffset(widget, offset) {
+    if (!widget.dataset.rodnoiOriginalTop) {
+      widget.dataset.rodnoiOriginalTop = widget.style.top || `${widget.offsetTop}px`;
+    }
+
+    const originalTop = parseFloat(widget.dataset.rodnoiOriginalTop);
+    if (!Number.isFinite(originalTop)) return;
+
+    widget.style.top = `${originalTop + offset}px`;
+  }
+
+  function positionFooterBase() {
+    const offset = getTabletFooterShift();
+    FOOTER_DECORATION_IDS.forEach((id) => {
+      allById(id).forEach((widget) => setTopOffset(widget, offset));
+    });
+  }
+
   function positionFooterPartners() {
     const credit = firstById(FOOTER_CREDIT_ID);
     const copy = firstById(FOOTER_COPY_ID);
@@ -346,7 +422,10 @@
 
     if (!credit || !copy || !footerBg || !socialRects.length) return false;
 
+    positionFooterBase();
+    setFooterBackgroundHeight(footerBg);
     stretchFooterBackground(footerBg);
+    setFooterPageHeight(footerBg);
 
     copy.style.transform = "none";
 
@@ -377,7 +456,7 @@
     const media = partners.querySelector(".rodnoi-footer-partners__media");
     if (!author || !media) return false;
 
-    let authorTop = footerTop + (220.89 * scale);
+    let authorTop = footerTop + ((220.89 + DESKTOP_FOOTER_CONTENT_SHIFT) * scale);
     let mediaTop = authorTop;
     let authorLeft = footerLeft + (40.46 * scale);
     let mediaLeft = footerLeft + (322.16 * scale);
@@ -441,8 +520,8 @@
         iconNode.style.transform = `translate(${socialTargetLeft - node.offsetLeft}px, ${socialTargetTop - node.offsetTop}px)`;
       });
     } else {
-      copy.style.transform = `translate(${copyTargetLeft - copy.offsetLeft}px, ${-11.6 * scale}px)`;
-      const socialLift = -20 * scale;
+      copy.style.transform = `translate(${copyTargetLeft - copy.offsetLeft}px, ${(-11.6 + DESKTOP_FOOTER_CONTENT_SHIFT) * scale}px)`;
+      const socialLift = (-20 + DESKTOP_FOOTER_CONTENT_SHIFT) * scale;
       socialBgNodes.forEach((node) => {
         node.style.transform = `translateY(${socialLift}px)`;
       });
@@ -829,7 +908,7 @@
 
       @media (max-width: 1100px) {
         .ethno-card-root {
-          width: calc(68vw + 108px) !important;
+          width: calc(68vw + 8px) !important;
           height: 300px !important;
           transform: translateX(-50%) !important;
         }
@@ -918,7 +997,7 @@
         }
 
         .ethno-card-arrow {
-          top: 324.82px;
+          top: 344.82px;
           bottom: auto;
           width: 71.3px;
           height: 71.3px;
@@ -934,7 +1013,7 @@
         }
 
         .ethno-card-pagination {
-          top: 346.97px;
+          top: 366.97px;
           gap: 11px;
         }
       }
@@ -1074,7 +1153,7 @@
         }
 
         .rodnoi-footer-partners__title {
-          transform: none;
+          transform: translateY(10px);
         }
 
         .rodnoi-footer-partners__logos {
@@ -1117,7 +1196,7 @@
 
       @media (min-width: 1101px) {
         .rodnoi-footer-partners__title {
-          transform: translateY(50px);
+          transform: translateY(65px);
         }
       }
     `;
