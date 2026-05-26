@@ -419,7 +419,8 @@
       ".rs-tabs-arrow-icon svg, .rs-tabs-arrow-icon svg path { fill: #ffffff !important; }",
       ".rs-tabs-arrow-icon:hover, .rs-tabs-arrow-icon:focus { opacity: 1 !important; filter: none !important; outline: none !important; }",
       ".rs-tabs-arrow-icon:active { opacity: 1 !important; filter: none !important; }",
-      ".rs-tabs-arrow-icon:active svg, .rs-tabs-arrow-icon:active svg path { fill: #db7031 !important; }"
+      ".rs-tabs-arrow-icon:active svg, .rs-tabs-arrow-icon:active svg path { fill: #db7031 !important; }",
+      ".rs-tabs-panel-shell .text-viewer, .rs-tabs-panel-shell .text-viewer * { color: #ffffff !important; }"
     ].join("\n");
     document.head.appendChild(style);
   }
