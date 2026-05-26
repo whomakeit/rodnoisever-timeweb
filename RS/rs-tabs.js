@@ -325,16 +325,42 @@
   function boot() {
     injectStyles();
 
-    if (init()) return;
-
     var attempts = 0;
-    var timer = window.setInterval(function () {
-      attempts += 1;
+    var timer = null;
+    var observer = null;
 
-      if (init() || attempts >= 40) {
-        window.clearInterval(timer);
+    function stopWatching() {
+      if (timer) window.clearInterval(timer);
+      if (observer) observer.disconnect();
+    }
+
+    function tryInit(countAttempt) {
+      if (countAttempt) attempts += 1;
+
+      if (init()) {
+        stopWatching();
+        return true;
       }
-    }, 250);
+
+      if (attempts >= 240) {
+        stopWatching();
+      }
+
+      return false;
+    }
+
+    if (tryInit(true)) return;
+
+    timer = window.setInterval(function () { tryInit(true); }, 250);
+
+    if (window.MutationObserver && document.body) {
+      observer = new MutationObserver(function () { tryInit(false); });
+      observer.observe(document.body, { childList: true, subtree: true });
+    }
+
+    [1000, 3000, 8000, 15000, 30000].forEach(function (delay) {
+      window.setTimeout(function () { tryInit(false); }, delay);
+    });
   }
 
   if (document.readyState === "loading") {
