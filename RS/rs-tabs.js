@@ -139,6 +139,9 @@
 
     if (!paragraph) return;
 
+    node.style.color = WHITE;
+    paragraph.style.color = WHITE;
+
     paragraph.innerHTML = text
       .split("\n")
       .map(function (line) {
@@ -171,7 +174,7 @@
   }
 
   function colorTab(tab, active) {
-    tab.style.cursor = window.matchMedia(MOBILE_QUERY).matches ? "default" : "pointer";
+    tab.style.cursor = "pointer";
     tab.style.color = active ? ORANGE : WHITE;
     tab.querySelectorAll("*").forEach(function (child) {
       child.style.color = active ? ORANGE : WHITE;
@@ -420,7 +423,9 @@
       ".rs-tabs-arrow-icon:hover, .rs-tabs-arrow-icon:focus { opacity: 1 !important; filter: none !important; outline: none !important; }",
       ".rs-tabs-arrow-icon:active { opacity: 1 !important; filter: none !important; }",
       ".rs-tabs-arrow-icon:active svg, .rs-tabs-arrow-icon:active svg path { fill: #db7031 !important; }",
-      ".rs-tabs-panel-shell .text-viewer, .rs-tabs-panel-shell .text-viewer * { color: #ffffff !important; }"
+      ".ethno-tab-panel, .ethno-tab-panel *, .rs-tabs-panel-shell, .rs-tabs-panel-shell .text-viewer, .rs-tabs-panel-shell .text-viewer * { color: #ffffff !important; }",
+      ".ethno-tab-button, .ethno-tab-button * { color: #ffffff !important; }",
+      ".ethno-tab-button[aria-selected='true'], .ethno-tab-button[aria-selected='true'] * { color: #db7031 !important; }"
     ].join("\n");
     document.head.appendChild(style);
   }
