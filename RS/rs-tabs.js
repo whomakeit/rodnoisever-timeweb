@@ -100,6 +100,7 @@
 
   var ready = false;
   var states = [];
+  var delegatedControlsBound = false;
 
   function byId(id) {
     return document.querySelector('[data-id="' + id + '"]');
@@ -214,6 +215,107 @@
     }, true);
   }
 
+  function getControlId(eventTarget) {
+    var node = eventTarget && eventTarget.closest ? eventTarget.closest("[data-id]") : null;
+    return node ? node.getAttribute("data-id") : "";
+  }
+
+  function getGroupAction(controlId) {
+    for (var groupIndex = 0; groupIndex < groups.length; groupIndex += 1) {
+      var group = groups[groupIndex];
+      var tabIndex = group.tabs.indexOf(controlId);
+
+      if (tabIndex !== -1) {
+        return { group: group, type: "tab", index: tabIndex };
+      }
+
+      if (group.prev.indexOf(controlId) !== -1) {
+        return { group: group, type: "prev" };
+      }
+
+      if (group.next.indexOf(controlId) !== -1) {
+        return { group: group, type: "next" };
+      }
+    }
+
+    return null;
+  }
+
+  function getLiveState(group) {
+    var tabs = asArray(group.tabs);
+    var panels = group.panels.map(function (panel) {
+      var widget = byId(panel.id);
+
+      return widget ? {
+        widget: widget,
+        shell: getPanelShell(widget),
+        text: panel.text
+      } : null;
+    }).filter(Boolean);
+    var prev = asArray(group.prev);
+    var next = asArray(group.next);
+
+    if (tabs.length !== 3 || panels.length !== 3 || prev.length === 0 || next.length === 0) {
+      return null;
+    }
+
+    panels.forEach(function (panel) {
+      preparePanel(panel.widget, panel.shell);
+      setPanelText(panel.widget, panel.text);
+    });
+
+    tabs.forEach(function (tab) {
+      tab.setAttribute("role", "tab");
+      tab.style.pointerEvents = window.matchMedia(MOBILE_QUERY).matches ? "none" : "auto";
+    });
+
+    prepareArrowPair(prev);
+    prepareArrowPair(next);
+
+    var active = tabs.findIndex(function (tab) {
+      return tab.getAttribute("aria-selected") === "true";
+    });
+
+    return {
+      active: active === -1 ? 0 : active,
+      tabs: tabs,
+      panels: panels,
+      prev: prev,
+      next: next,
+      panelSlot: getRectStyle(panels[0].shell),
+      panelZ: Number(panels[0].shell.style.zIndex || 1)
+    };
+  }
+
+  function bindDelegatedControls() {
+    if (delegatedControlsBound) return;
+
+    document.addEventListener("click", function (event) {
+      var action = getGroupAction(getControlId(event.target));
+
+      if (!action) return;
+
+      var state = getLiveState(action.group);
+
+      if (!state) return;
+
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (action.type === "tab") {
+        if (!window.matchMedia(MOBILE_QUERY).matches) {
+          showPanel(state, action.index, false);
+        }
+      } else if (action.type === "prev") {
+        showPanel(state, state.active - 1, false);
+      } else if (action.type === "next") {
+        showPanel(state, state.active + 1, false);
+      }
+    }, true);
+
+    delegatedControlsBound = true;
+  }
+
   function prepareArrowPair(pair) {
     pair.forEach(function (arrow, index) {
       arrow.classList.add("rs-tabs-arrow");
@@ -324,14 +426,13 @@
 
   function boot() {
     injectStyles();
+    bindDelegatedControls();
 
     var attempts = 0;
     var timer = null;
-    var observer = null;
 
     function stopWatching() {
       if (timer) window.clearInterval(timer);
-      if (observer) observer.disconnect();
     }
 
     function tryInit(countAttempt) {
@@ -352,11 +453,6 @@
     if (tryInit(true)) return;
 
     timer = window.setInterval(function () { tryInit(true); }, 250);
-
-    if (window.MutationObserver && document.body) {
-      observer = new MutationObserver(function () { tryInit(false); });
-      observer.observe(document.body, { childList: true, subtree: true });
-    }
 
     [1000, 3000, 8000, 15000, 30000].forEach(function (delay) {
       window.setTimeout(function () { tryInit(false); }, delay);
