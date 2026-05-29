@@ -1,4 +1,4 @@
-import{a as i,b as m}from"https://st-p.rmcdn1.net/615f1006/dist/c/c-NSGPEX7Z.js";import{a as g}from"https://st-p.rmcdn1.net/615f1006/dist/c/c-32W62OPA.js";import{b as s,c as y}from"https://st-p.rmcdn1.net/615f1006/dist/c/c-6RYT6HOE.js";import{a as h}from"https://st-p.rmcdn1.net/615f1006/dist/c/c-IQD5UCI7.js";import{b as d}from"https://st-p.rmcdn1.net/615f1006/dist/c/c-PT6T64KT.js";import{a,d as r}from"https://st-p.rmcdn1.net/615f1006/dist/c/c-HWCRKC24.js";var c,n=a(()=>{"use strict";m();c={"template-common-alert":i`
+import{a as i,b as m}from"/specprojects/rodnoysever/dist/c/c-NSGPEX7Z.js";import{a as g}from"/specprojects/rodnoysever/dist/c/c-32W62OPA.js";import{b as s,c as y}from"/specprojects/rodnoysever/dist/c/c-6RYT6HOE.js";import{a as h}from"/specprojects/rodnoysever/dist/c/c-IQD5UCI7.js";import{b as d}from"/specprojects/rodnoysever/dist/c/c-PT6T64KT.js";import{a,d as r}from"/specprojects/rodnoysever/dist/c/c-HWCRKC24.js";var c,n=a(()=>{"use strict";m();c={"template-common-alert":i`
 	<%
 		var categories = {
 			'type-duplicate':				'category-upgrade',

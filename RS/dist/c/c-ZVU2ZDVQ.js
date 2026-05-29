@@ -1,4 +1,4 @@
-import{a as s,b as I}from"https://st-p.rmcdn1.net/615f1006/dist/c/c-NSGPEX7Z.js";import{q as g,r as P}from"https://st-p.rmcdn1.net/615f1006/dist/c/c-2HBVGRVG.js";import{a as W}from"https://st-p.rmcdn1.net/615f1006/dist/c/c-32W62OPA.js";import{a as k}from"https://st-p.rmcdn1.net/615f1006/dist/c/c-IQD5UCI7.js";import{b as O}from"https://st-p.rmcdn1.net/615f1006/dist/c/c-PT6T64KT.js";import{a as n,d as b}from"https://st-p.rmcdn1.net/615f1006/dist/c/c-HWCRKC24.js";var h,m=n(()=>{"use strict";I();h={"template-common-hotspot-widget":s`
+import{a as s,b as I}from"/specprojects/rodnoysever/dist/c/c-NSGPEX7Z.js";import{q as g,r as P}from"/specprojects/rodnoysever/dist/c/c-2HBVGRVG.js";import{a as W}from"/specprojects/rodnoysever/dist/c/c-32W62OPA.js";import{a as k}from"/specprojects/rodnoysever/dist/c/c-IQD5UCI7.js";import{b as O}from"/specprojects/rodnoysever/dist/c/c-PT6T64KT.js";import{a as n,d as b}from"/specprojects/rodnoysever/dist/c/c-HWCRKC24.js";var h,m=n(()=>{"use strict";I();h={"template-common-hotspot-widget":s`
 
     <div class="common-hotspot">
       <div class="pin"></div>
