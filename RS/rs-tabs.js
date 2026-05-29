@@ -3,9 +3,10 @@
   var WHITE = "#ffffff";
   var MOBILE_QUERY = "(max-width: 767px)";
   var TABLET_QUERY = "(min-width: 768px) and (max-width: 1199px)";
+  var DEBUG_TABS = false;
   var MENU_BASE_WIDTHS = {
     mobile: 390,
-    tablet: 786,
+    tablet: 768,
     desktop: 1200
   };
   var FILM_WIDGET_ID = "6a0dc30f29e9a6eed7aa03e0";
@@ -70,17 +71,17 @@
         {
           id: "6a0aeb41ec0efb96fb5efe1e",
           title: "МАНСИ",
-          text: "Манси – народ гор, ветра и тайги, их численность около 12 000 человек. В их мире всё имеет голос: ручей говорит с путником, ветер предупреждает об опасности, а медведь приходит не как зверь, а как гость. Человек здесь не царь природы. Он – слушатель."
+          text: "Манси — народ гор, ветра и тайги, их численность около 12 000 человек. В их мире всё имеет голос: ручей говорит с путником, ветер предупреждает об опасности, а медведь приходит не как зверь, а как гость. Человек здесь не царь природы. Он — слушатель."
         },
         {
           id: "6a0aeee2dba84a62fb2c7986",
           title: "ГДЕ ЖИВУТ?",
-          text: "Они живут на западных склонах Урала и в бассейне реки Северная Сосьва. Это край тайги, переходящей в тундру."
+          text: "Они живут на западных склонах Урала и в бассейне реки Северная Сосьва. Это край тайги, переходящей в тундру."
         },
         {
           id: "6a0aeefadba84a62fb2c7e84",
           title: "ГДЕ ПОЗНАКОМИТЬСЯ?",
-          text: "Гонки на обласах на Кубок губернатора Югры собирают сотни участников и зрителей. Здесь соревнования становятся праздником: проводятся обряды, мастер-классы по ремёслам, звучит музыка. «Газпром нефть» поддерживает событие – и оно остаётся живым и настоящим."
+          text: "Гонки на обласах на Кубок губернатора Югры собирают сотни участников и зрителей. Здесь соревнования становятся праздником: проводятся обряды, мастер-классы по ремёслам, звучит музыка. «Газпром нефть» поддерживает событие — и оно остаётся живым и настоящим."
         }
       ],
       pager: "6a16be9fa18ff42d8f2428d8",
@@ -97,18 +98,18 @@
         {
           id: "6a0afa6dedfa8892990af81a",
           title: "НЕНЦЫ",
-          text: "Ненцы – крупнейший кочевой народ России, их численность – около 45 000 человек. Многие из них до сих пор живут так, как жили предки тысячу лет назад: каслают по тундре вслед за оленьими стадами. Для ненца олень – это всё: жизнь, дом, путь, время."
+          text: "Ненцы — крупнейший кочевой народ России, их численность — около 45 000 человек. Многие из них до сих пор живут так, как жили предки тысячу лет назад: каслают по тундре вслед за оленьими стадами. Для ненца олень — это всё: жизнь, дом, путь, время."
         },
         {
           id: "6a0afa6e24639135cf4b65fe",
+          cloneFrom: "6a0afa6dedfa8892990af81a",
           title: "ГДЕ ЖИВУТ?",
-          text: "Они живут на огромной территории от Кольского полуострова до Таймыра, но сердце их земли – Ямал, что в переводе с ненецкого означает «край земли».",
-          tabletOffsetY: 28
+          text: "Они живут на огромной территории от Кольского полуострова до Таймыра, но сердце их земли — Ямал, что в переводе с ненецкого означает «край земли»."
         },
         {
           id: "6a0afa6e2d250f7a2fd48cdf",
           title: "ГДЕ ПОЗНАКОМИТЬСЯ?",
-          text: "За полярным кругом, в селе Мыс Каменный, проходит «Дыхание Арктики» – фестиваль искусства и творчества, рожденный в самой тундре. Здесь встречаются ремёсла, музыка и танец. На один день село превращается в живой круговорот талантов и традиций. «Родные города» помогли этой идее стать реальностью. И теперь в ней может участвовать каждый."
+          text: "За полярным кругом, в селе Мыс Каменный, проходит «Дыхание Арктики» — фестиваль искусства и творчества, рожденный в самой тундре. Здесь встречаются ремёсла, музыка и танец. На один день село превращается в живой круговорот талантов и традиций. «Родные города» помогли этой идее стать реальностью. И теперь в ней может участвовать каждый."
         }
       ],
       pager: "6a16cdab8b9bbfbd86b3eaac",
@@ -125,20 +126,21 @@
         {
           id: "6a0b047a52f5fd4a56e8136e",
           title: "СЕЛЬКУПЫ",
-          text: "Селькупы – один из самых малочисленных народов Сибири: их около 4 500 человек. «Селькуп» означает «лесной человек», они рыболовы и охотники. Их главное орудие – лодка-обласок, выдолбленная из цельного ствола кедра или осины. Она лёгкая, манёвренная, идеальная для таёжных рек с порогами и мелями."
+          text: "Селькупы — один из самых малочисленных народов Сибири: их около 4 500 человек. «Селькуп» означает «лесной человек», они рыболовы и охотники. Их главное орудие — лодка-обласок, выдолбленная из цельного ствола кедра или осины. Она лёгкая, манёвренная, идеальная для таёжных рек с порогами и мелями."
         },
         {
           id: "6a0b047a2348b2c2ddd483bf",
           title: "ГДЕ ЖИВУТ?",
-          text: "Они живут на севере Томской области и в Красноселькупском районе Ямало-Ненецкого автономного округа, в бассейне рек Таз и Пур."
+          text: "Они живут на севере Томской области и в Красноселькупском районе Ямало-Ненецкого автономного округа, в бассейне рек Таз и Пур."
         },
         {
           id: "6a0b047ad89100fff3b27e80",
           title: "ГДЕ ПОЗНАКОМИТЬСЯ?",
-          text: "«Сказки Севера» – проект программы «Родные города», который собирает голоса коренных народов. Фольклор здесь звучит как радиоспектакль – живо, точно, бережно.\nСегодня проект объединяет разные регионы и культуры.\nВ их числе и селькупские сказки, доступные для свободного прослушивания."
+          text: "«Сказки Севера» — проект программы «Родные города», который собирает голоса коренных народов. Фольклор здесь звучит как радиоспектакль — живо, точно, бережно.\nСегодня проект объединяет разные регионы и культуры.\nВ их числе и селькупские сказки, доступные для свободного прослушивания."
         }
       ],
       pager: "6a16da8c5c879c631855c924",
+      key: "selkup",
       prev: ["6a153e69316b91b5a1842e55", "6a153f7dfe20c7b4e17f7763"],
       next: ["6a153e5b13f67ba7e2f6102a", "6a153f4142323948e7e219aa"]
     },
@@ -152,20 +154,21 @@
         {
           id: "6a0afcd9dcfe1c8db2172afd",
           title: "ХАНТЫ",
-          text: "Ханты – один из древнейших народов Западной Сибири. Их численность – около 30 000 человек и за каждым стоит род, уходящий корнями вглубь веков. Их культура выросла из движения: сезонных переходов, охоты, рыболовства. Здесь традиции – не наследие, а повседневность."
+          text: "Ханты — один из древнейших народов Западной Сибири. Их численность — около 30 000 человек и за каждым стоит род, уходящий корнями вглубь веков. Их культура выросла из движения: сезонных переходов, охоты, рыболовства. Здесь традиции — не наследие, а повседневность."
         },
         {
           id: "6a0afcd9edfa8892990d081c",
           title: "ГДЕ ЖИВУТ?",
-          text: "Ханты живут в Ханты-Мансийском автономном округе-Югре, по берегам великих рек: Оби, Иртыша, Конды и Казыма."
+          text: "Ханты живут в Ханты-Мансийском автономном округе-Югре, по берегам великих рек: Оби, Иртыша, Конды и Казыма."
         },
         {
           id: "6a0afcdadbe170b7568de1c7",
           title: "ГДЕ ПОЗНАКОМИТЬСЯ?",
-          text: "День оленевода – праздник, в котором сходятся спорт, быт, мастерство и родовая память. Еще в ХМАО-Югре при поддержке «Газпром нефти» проходит конкурс профессионального мастерства среди оленеводов на Кубок губернатора Югры. Они соревнуются в гонках оленьих упряжек, укладке нарт, беге на охотничьих лыжах.\nКаждый год это помогает сохранять вековые традиции древнего народа."
+          text: "День оленевода — праздник, в котором сходятся спорт, быт, мастерство и родовая память. Еще в ХМАО-Югре при поддержке «Газпром нефти» проходит конкурс профессионального мастерства среди оленеводов на Кубок губернатора Югры. Они соревнуются в гонках оленьих упряжек, укладке нарт, беге на охотничьих лыжах.\nКаждый год это помогает сохранять вековые традиции древнего народа."
         }
       ],
       pager: "6a16c8fe5b0a264b78529c27",
+      key: "hanty",
       prev: ["6a154053362dc1a1f0a675c6", "6a154054b2b5a58faa96a962"],
       next: ["6a154053fe20c7b4e17f86d8", "6a1540539993f385d1b7e17f"]
     }
@@ -174,7 +177,14 @@
   var ready = false;
   var filmReady = false;
   var menuAnchorsReady = false;
+  var tabsResizeReady = false;
+  var tabsDelegationReady = false;
+  var lastTabsAction = {
+    key: "",
+    time: 0
+  };
   var states = [];
+  var tabsDebugNode = null;
 
   var desktopMenuAnchors = {
     "МАНСИ": 1502,
@@ -183,10 +193,10 @@
     "ХАНТЫ": 5437
   };
   var tabletMenuAnchors = {
-    "МАНСИ": 1890,
-    "НЕНЦЫ": 2960,
-    "СЕЛЬКУПЫ": 4100,
-    "ХАНТЫ": 5127
+    "МАНСИ": 1866,
+    "НЕНЦЫ": 2946,
+    "СЕЛЬКУПЫ": 4026,
+    "ХАНТЫ": 5097
   };
   var mobileMenuAnchors = {
     "МАНСИ": 1521,
@@ -195,8 +205,55 @@
     "ХАНТЫ": 6305
   };
 
+  function getMenuViewportWidth() {
+    return window.innerWidth || document.documentElement.clientWidth || MENU_BASE_WIDTHS.desktop;
+  }
+
+  function getMenuMode(width) {
+    if (width < 600) return "mobile";
+    if (width < MENU_BASE_WIDTHS.desktop) return "tablet";
+
+    return "desktop";
+  }
+
+  function getMenuAnchors(mode) {
+    if (mode === "mobile") return mobileMenuAnchors;
+    if (mode === "tablet") return tabletMenuAnchors;
+
+    return desktopMenuAnchors;
+  }
+
+  function getMaxScrollTop() {
+    var root = document.documentElement;
+    var body = document.body;
+    var scrollHeight = Math.max(
+      root ? root.scrollHeight : 0,
+      body ? body.scrollHeight : 0
+    );
+    var viewportHeight = window.innerHeight || (root ? root.clientHeight : 0);
+
+    return Math.max(0, scrollHeight - viewportHeight);
+  }
+
+  function clampMenuAnchorPosition(position) {
+    return Math.min(Math.max(0, position), getMaxScrollTop());
+  }
+
   function byId(id) {
-    return document.querySelector('[data-id="' + id + '"]');
+    var nodes = Array.prototype.slice.call(document.querySelectorAll('[data-id="' + id + '"]'));
+    var best = null;
+    var bestScore = -1;
+
+    nodes.forEach(function (node) {
+      var score = getNodeScore(node);
+
+      if (score > bestScore) {
+        best = node;
+        bestScore = score;
+      }
+    });
+
+    return best || nodes[0] || null;
   }
 
   function asArray(ids) {
@@ -209,6 +266,59 @@
     }
 
     return node;
+  }
+
+  function getNodeScore(node) {
+    var rect;
+    var shell;
+    var style;
+    var zIndex;
+
+    if (!node) return -1;
+
+    shell = getPanelShell(node);
+    style = window.getComputedStyle(shell);
+    if (style.display === "none" || style.visibility === "hidden") return -1;
+
+    rect = shell.getBoundingClientRect();
+    if (rect.width <= 0 || rect.height <= 0) return -1;
+
+    zIndex = parseInt(style.zIndex, 10);
+    return rect.width * rect.height + (Number.isFinite(zIndex) ? zIndex * 1000 : 0);
+  }
+
+  function clonePanelWidget(panel) {
+    var sourceWidget;
+    var sourceShell;
+    var originalWidget;
+    var originalShell;
+    var cloneShell;
+    var cloneWidget;
+
+    if (!panel.cloneFrom) return byId(panel.id);
+    if (panel.clonedWidget) return panel.clonedWidget;
+
+    sourceWidget = byId(panel.cloneFrom);
+    originalWidget = byId(panel.id);
+    if (!sourceWidget || !originalWidget) return originalWidget;
+
+    sourceShell = getPanelShell(sourceWidget);
+    originalShell = getPanelShell(originalWidget);
+    cloneShell = sourceShell.cloneNode(true);
+    cloneWidget = cloneShell.matches && cloneShell.matches('[data-id="' + panel.cloneFrom + '"]') ?
+      cloneShell :
+      cloneShell.querySelector('[data-id="' + panel.cloneFrom + '"]');
+
+    if (!cloneWidget) return originalWidget;
+
+    originalShell.style.display = "none";
+    cloneWidget.setAttribute("data-id", panel.id);
+    cloneWidget.dataset.rsClonedFrom = panel.cloneFrom;
+    cloneShell.dataset.rsClonedPanel = panel.id;
+    originalShell.parentNode.insertBefore(cloneShell, originalShell.nextSibling);
+    panel.clonedWidget = cloneWidget;
+
+    return cloneWidget;
   }
 
   function getRectStyle(node) {
@@ -244,18 +354,36 @@
     return true;
   }
 
-  function setPanelSlot(panel, rect) {
-    setRectStyle(panel.shell, rect);
+  function setPanelSlot(panel, rect, sourceRect) {
+    var nextRect = {
+      left: rect.left,
+      top: sourceRect && sourceRect.top ? sourceRect.top : rect.top,
+      width: rect.width,
+      height: sourceRect && sourceRect.height ? sourceRect.height : rect.height
+    };
 
-    if (!panel.tabletOffsetY || !window.matchMedia(TABLET_QUERY).matches) {
-      return;
-    }
-
-    panel.shell.style.top = (getInlineNumber(panel.shell, "top") + panel.tabletOffsetY) + "px";
+    setRectStyle(panel.shell, nextRect);
   }
 
   function setPanelText(node, text) {
     setWidgetText(node, text, true);
+  }
+
+  function forcePanelTextVisible(panel) {
+    var target = getTextTarget(panel.widget);
+
+    setPanelText(panel.widget, panel.text);
+    if (!target) return;
+
+    target.style.opacity = "1";
+    target.style.visibility = "visible";
+    target.style.display = target.tagName === "P" ? "block" : "";
+    target.style.color = WHITE;
+    target.querySelectorAll("*").forEach(function (child) {
+      child.style.opacity = "1";
+      child.style.visibility = "visible";
+      child.style.color = WHITE;
+    });
   }
 
   function getTextTarget(node) {
@@ -374,13 +502,16 @@
     setPager(state.pager, state.active);
 
     state.panels.forEach(function (panel, panelIndex) {
-      setPanelSlot(panel, state.panelSlot);
+      setPanelSlot(panel, state.panelSlot, state.panelSlots && state.panelSlots[panelIndex]);
       panel.shell.style.zIndex = String(state.panelZ + panelIndex);
       panel.shell.style.transition = instant ? "none" : "opacity 320ms ease, visibility 320ms ease";
       panel.shell.style.opacity = panelIndex === state.active ? "1" : "0";
       panel.shell.style.visibility = panelIndex === state.active ? "visible" : "hidden";
       panel.shell.style.pointerEvents = panelIndex === state.active ? "auto" : "none";
       panel.widget.setAttribute("aria-hidden", panelIndex === state.active ? "false" : "true");
+      if (panelIndex === state.active) {
+        forcePanelTextVisible(panel);
+      }
     });
   }
 
@@ -402,17 +533,232 @@
     }, true);
   }
 
+  function getDebugNode() {
+    if (!DEBUG_TABS) return null;
+    if (tabsDebugNode) return tabsDebugNode;
+
+    tabsDebugNode = document.createElement("pre");
+    tabsDebugNode.className = "rs-tabs-debug";
+    tabsDebugNode.textContent = "tabs debug: waiting for click";
+    document.body.appendChild(tabsDebugNode);
+    return tabsDebugNode;
+  }
+
+  function getDebugId(node) {
+    return node && node.getAttribute ? node.getAttribute("data-id") : "";
+  }
+
+  function getDebugPath(event) {
+    var path = event.composedPath ? event.composedPath() : [];
+
+    return path.slice(0, 8).map(function (node) {
+      if (!node || !node.tagName) return "";
+      return node.tagName.toLowerCase() + (getDebugId(node) ? "[" + getDebugId(node) + "]" : "") + (node.className && typeof node.className === "string" ? "." + node.className.replace(/\s+/g, ".") : "");
+    }).filter(Boolean);
+  }
+
+  function debugTabs(label, data) {
+    var node = getDebugNode();
+    var time = new Date().toLocaleTimeString();
+
+    if (!node) return;
+
+    node.textContent = time + " " + label + "\n" + JSON.stringify(data, null, 2);
+  }
+
+  function debugRawTabsEvent(event) {
+    var target = event.target;
+    var widget = target && target.closest && target.closest(".rmwidget[data-id]");
+    var overlay = target && target.closest && target.closest(".rs-tabs-arrow-overlay");
+    var id = widget && widget.getAttribute("data-id");
+    var allArrowIds = [];
+    var pointTarget;
+
+    if (!DEBUG_TABS) return;
+
+    groups.forEach(function (group) {
+      allArrowIds = allArrowIds.concat(group.prev, group.next);
+    });
+
+    if (!overlay && allArrowIds.indexOf(id) === -1) return;
+
+    pointTarget = document.elementFromPoint(event.clientX || 0, event.clientY || 0);
+    debugTabs("raw " + event.type, {
+      clientX: Math.round(event.clientX || 0),
+      clientY: Math.round(event.clientY || 0),
+      targetTag: target && target.tagName,
+      widgetId: id || "",
+      overlay: Boolean(overlay),
+      pointTag: pointTarget && pointTarget.tagName,
+      pointId: getDebugId(pointTarget),
+      pointClass: pointTarget && pointTarget.className,
+      path: getDebugPath(event)
+    });
+  }
+
+  function getTabsClickData(event) {
+    var dot = event.target.closest && event.target.closest("[data-rs-tab-index]");
+    var widget = event.target.closest && event.target.closest(".rmwidget[data-id]");
+    var overlay = event.target.closest && event.target.closest(".rs-tabs-arrow-overlay");
+    var id = widget && widget.getAttribute("data-id");
+    var group;
+    var index;
+    var direction;
+
+    if (overlay) {
+      direction = overlay.dataset.rsArrowFor;
+      for (index = 0; index < states.length; index += 1) {
+        if (states[index].arrowOverlays && states[index].arrowOverlays.indexOf(overlay) !== -1) {
+          return {
+            group: states[index].group,
+            type: direction
+          };
+        }
+      }
+    }
+
+    if (!id) return null;
+
+    for (index = 0; index < groups.length; index += 1) {
+      group = groups[index];
+      if (id === group.pager && dot) {
+        return {
+          group: group,
+          type: "dot",
+          index: Number(dot.getAttribute("data-rs-tab-index"))
+        };
+      }
+      if (group.prev.indexOf(id) !== -1) {
+        return {
+          group: group,
+          type: "prev"
+        };
+      }
+      if (group.next.indexOf(id) !== -1) {
+        return {
+          group: group,
+          type: "next"
+        };
+      }
+    }
+
+    return null;
+  }
+
+  function handleDelegatedTabsClick(event) {
+    var data = getTabsClickData(event);
+    var state;
+    var actionKey;
+    var now;
+    var before;
+    var after;
+
+    if (!data) {
+      if (DEBUG_TABS && (event.type === "pointerdown" || event.type === "click")) {
+        debugRawTabsEvent(event);
+      }
+      return;
+    }
+
+    actionKey = groups.indexOf(data.group) + ":" + data.type + ":" + (data.index || "");
+    now = Date.now();
+
+    if (lastTabsAction.key === actionKey && now - lastTabsAction.time < 450) {
+      event.preventDefault();
+      event.stopPropagation();
+      if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+      return;
+    }
+
+    if (!data.group.rsTabsReady || !isGroupStateCurrent(data.group)) {
+      refreshGroup(data.group);
+    }
+    state = data.group.rsTabsState;
+    if (!state) return;
+    before = state.active;
+
+    event.preventDefault();
+    event.stopPropagation();
+    if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+
+    if (data.type === "dot") {
+      showPanel(state, data.index, false);
+    } else if (data.type === "prev") {
+      showPanel(state, state.active - 1, false);
+    } else if (data.type === "next") {
+      showPanel(state, state.active + 1, false);
+    }
+    after = state.active;
+
+    debugTabs("handled " + event.type, {
+      group: data.group.debugName || data.group.panels[0].title,
+      type: data.type,
+      before: before,
+      after: after,
+      titleText: state.title.textContent.trim().replace(/\s+/g, " "),
+      visiblePanel: state.panels[after] && state.panels[after].title,
+      path: getDebugPath(event)
+    });
+
+    lastTabsAction.key = actionKey;
+    lastTabsAction.time = now;
+  }
+
+  function isNodeCurrent(id, node) {
+    return Boolean(node) && document.documentElement.contains(node) && byId(id) === node;
+  }
+
+  function isGroupStateCurrent(group) {
+    var state = group.rsTabsState;
+
+    if (!state) return false;
+    if (!isNodeCurrent(group.tabs[0], state.title)) return false;
+    if (!isNodeCurrent(group.pager, state.pager)) return false;
+
+    return group.panels.every(function (panel, index) {
+      return state.panels[index] && isNodeCurrent(panel.id, state.panels[index].widget);
+    });
+  }
+
+  function refreshGroup(group) {
+    if (group.rsTabsState) {
+      removeArrowOverlays(group.rsTabsState);
+      states = states.filter(function (state) {
+        return state !== group.rsTabsState;
+      });
+    }
+
+    group.rsTabsReady = false;
+    group.rsTabsState = null;
+    ready = false;
+    init();
+  }
+
+  function initTabsDelegation() {
+    if (tabsDelegationReady) return;
+
+    window.addEventListener("pointerdown", debugRawTabsEvent, true);
+    window.addEventListener("click", debugRawTabsEvent, true);
+    window.addEventListener("pointerdown", handleDelegatedTabsClick, true);
+    window.addEventListener("mousedown", handleDelegatedTabsClick, true);
+    window.addEventListener("touchstart", handleDelegatedTabsClick, true);
+    window.addEventListener("click", handleDelegatedTabsClick, true);
+    document.addEventListener("pointerdown", handleDelegatedTabsClick, true);
+    document.addEventListener("click", handleDelegatedTabsClick, true);
+    tabsDelegationReady = true;
+  }
+
   function getMenuAnchorTarget(event) {
     var link = event.target.closest && event.target.closest("a.anchor-link");
     var label = link ? link.textContent.trim().replace(/\s+/g, " ") : "";
-    var isMobile = window.matchMedia(MOBILE_QUERY).matches;
-    var isTablet = window.matchMedia(TABLET_QUERY).matches;
-    var mode = isMobile ? "mobile" : (isTablet ? "tablet" : "desktop");
-    var anchors = isMobile ? mobileMenuAnchors : (isTablet ? tabletMenuAnchors : desktopMenuAnchors);
+    var width = getMenuViewportWidth();
+    var mode = getMenuMode(width);
+    var anchors = getMenuAnchors(mode);
     var position = anchors[label];
 
     if (Number.isFinite(position)) {
-      position = Math.round(position * (document.documentElement.clientWidth / MENU_BASE_WIDTHS[mode]));
+      position = Math.round(position * (width / MENU_BASE_WIDTHS[mode]));
+      position = clampMenuAnchorPosition(position);
     }
 
     return Number.isFinite(position) ? position : null;
@@ -428,14 +774,19 @@
   function initMenuAnchors() {
     if (menuAnchorsReady) return;
 
-    document.addEventListener("click", function (event) {
+    function handleMenuAnchorEvent(event) {
       var position = getMenuAnchorTarget(event);
       if (position === null) return;
 
       event.preventDefault();
       event.stopPropagation();
+      event.stopImmediatePropagation();
       scrollToMenuAnchor(position);
-    }, true);
+    }
+
+    document.addEventListener("pointerdown", handleMenuAnchorEvent, true);
+    document.addEventListener("touchstart", handleMenuAnchorEvent, true);
+    document.addEventListener("click", handleMenuAnchorEvent, true);
     document.addEventListener("keydown", function (event) {
       var position = getMenuAnchorTarget(event);
       if (position === null) return;
@@ -443,6 +794,7 @@
 
       event.preventDefault();
       event.stopPropagation();
+      event.stopImmediatePropagation();
       scrollToMenuAnchor(position);
     }, true);
 
@@ -780,34 +1132,137 @@
     });
   }
 
+  function createArrowOverlay(state, pair, direction) {
+    var hit = pair[0];
+    var icon = pair[1];
+    var overlay = document.createElement("button");
+    var sync;
+    var activate = function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+      showPanel(state, direction === "prev" ? state.active - 1 : state.active + 1, false);
+    };
+    var setPressed = function (pressed) {
+      if (icon) icon.classList.toggle("rs-tabs-arrow-pressed", pressed);
+    };
+
+    overlay.type = "button";
+    overlay.className = "rs-tabs-arrow-overlay";
+    overlay.setAttribute("aria-label", direction === "prev" ? "Предыдущая карточка" : "Следующая карточка");
+    overlay.dataset.rsArrowFor = direction;
+
+    sync = function () {
+      var rect = hit.getBoundingClientRect();
+      var visible = rect.width > 0 && rect.height > 0;
+
+      overlay.style.left = (rect.left - 10) + "px";
+      overlay.style.top = (rect.top - 10) + "px";
+      overlay.style.width = (rect.width + 20) + "px";
+      overlay.style.height = (rect.height + 20) + "px";
+      overlay.style.display = visible ? "block" : "none";
+    };
+
+    overlay.addEventListener("pointerdown", function (event) {
+      setPressed(true);
+      activate(event);
+    }, true);
+    overlay.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+    }, true);
+    overlay.addEventListener("mouseenter", function () {
+      if (icon) icon.classList.add("rs-tabs-arrow-hover");
+    });
+    overlay.addEventListener("mouseleave", function () {
+      if (icon) {
+        icon.classList.remove("rs-tabs-arrow-hover");
+        icon.classList.remove("rs-tabs-arrow-pressed");
+      }
+    });
+    overlay.addEventListener("pointerup", function () {
+      setPressed(false);
+    });
+    overlay.addEventListener("pointercancel", function () {
+      setPressed(false);
+    });
+    overlay.addEventListener("keydown", function (event) {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      setPressed(true);
+      activate(event);
+    }, true);
+    overlay.addEventListener("keyup", function () {
+      setPressed(false);
+    });
+
+    window.addEventListener("scroll", sync, { passive: true });
+    window.addEventListener("resize", sync);
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener("scroll", sync, { passive: true });
+      window.visualViewport.addEventListener("resize", sync);
+    }
+
+    overlay.rsTabsCleanup = function () {
+      window.removeEventListener("scroll", sync);
+      window.removeEventListener("resize", sync);
+      if (window.visualViewport) {
+        window.visualViewport.removeEventListener("scroll", sync);
+        window.visualViewport.removeEventListener("resize", sync);
+      }
+    };
+
+    document.body.appendChild(overlay);
+    sync();
+    return overlay;
+  }
+
+  function createArrowOverlays(state) {
+    state.arrowOverlays = [
+      createArrowOverlay(state, state.prev, "prev"),
+      createArrowOverlay(state, state.next, "next")
+    ];
+  }
+
+  function removeArrowOverlays(state) {
+    if (!state || !state.arrowOverlays) return;
+
+    state.arrowOverlays.forEach(function (overlay) {
+      if (overlay.rsTabsCleanup) overlay.rsTabsCleanup();
+      if (overlay.parentElement) overlay.parentElement.removeChild(overlay);
+    });
+    state.arrowOverlays = [];
+  }
+
   function init() {
     if (ready) return true;
 
     initMenuAnchors();
-
-    var nextStates = [];
+    initTabsDelegation();
 
     for (var groupIndex = 0; groupIndex < groups.length; groupIndex += 1) {
       var group = groups[groupIndex];
+      var state;
       var tabs = asArray(group.tabs);
       var title = byId(group.tabs[0]);
       var pager = byId(group.pager);
       var panels = group.panels.map(function (panel) {
-        var widget = byId(panel.id);
+        var widget = clonePanelWidget(panel);
 
         return widget ? {
           widget: widget,
           shell: getPanelShell(widget),
           title: panel.title,
-          text: panel.text,
-          tabletOffsetY: panel.tabletOffsetY || 0
+          text: panel.text
         } : null;
       }).filter(Boolean);
       var prev = asArray(group.prev);
       var next = asArray(group.next);
 
+      if (group.rsTabsReady) continue;
+
       if (!title || !pager || panels.length !== 3 || prev.length === 0 || next.length === 0) {
-        return false;
+        continue;
       }
 
       panels.forEach(function (panel) {
@@ -815,9 +1270,11 @@
         setPanelText(panel.widget, panel.text);
       });
       prepareTitle(title);
+      pager.classList.add("rs-tabs-pager");
 
-      nextStates.push({
+      state = {
         active: 0,
+        group: group,
         title: title,
         hiddenTabs: tabs.filter(function (tab) {
           return tab !== title;
@@ -827,46 +1284,58 @@
         prev: prev,
         next: next,
         panelSlot: getRectStyle(panels[0].shell),
+        panelSlots: group.usePanelSourceY ? panels.map(function (panel) {
+          return getRectStyle(panel.shell);
+        }) : null,
         panelZ: Number(panels[0].shell.style.zIndex || 1)
-      });
+      };
+
+      (function (currentState) {
+        currentState.pager.setAttribute("role", "tablist");
+        bindClick(currentState.pager, function (event) {
+          var dot = event.target.closest("[data-rs-tab-index]");
+
+          if (!dot) return;
+          showPanel(currentState, Number(dot.getAttribute("data-rs-tab-index")), false);
+        });
+
+        prepareArrowPair(currentState.prev);
+        prepareArrowPair(currentState.next);
+
+        currentState.prev.forEach(function (arrow) {
+          bindClick(arrow, function () {
+            showPanel(currentState, currentState.active - 1, false);
+          });
+        });
+
+        currentState.next.forEach(function (arrow) {
+          bindClick(arrow, function () {
+            showPanel(currentState, currentState.active + 1, false);
+          });
+        });
+
+        showPanel(currentState, 0, true);
+        setMobileMode(currentState);
+      })(state);
+
+      states.push(state);
+      group.debugName = group.panels[0].title;
+      group.rsTabsState = state;
+      group.rsTabsReady = true;
     }
 
-    states = nextStates;
-
-    states.forEach(function (state) {
-      state.pager.setAttribute("role", "tablist");
-      bindClick(state.pager, function (event) {
-        var dot = event.target.closest("[data-rs-tab-index]");
-
-        if (!dot) return;
-        showPanel(state, Number(dot.getAttribute("data-rs-tab-index")), false);
+    if (!tabsResizeReady) {
+      window.addEventListener("resize", function () {
+        states.forEach(setMobileMode);
+        init();
       });
+      tabsResizeReady = true;
+    }
 
-      prepareArrowPair(state.prev);
-      prepareArrowPair(state.next);
-
-      state.prev.forEach(function (arrow) {
-        bindClick(arrow, function () {
-          showPanel(state, state.active - 1, false);
-        });
-      });
-
-      state.next.forEach(function (arrow) {
-        bindClick(arrow, function () {
-          showPanel(state, state.active + 1, false);
-        });
-      });
-
-      showPanel(state, 0, true);
-      setMobileMode(state);
+    ready = groups.every(function (group) {
+      return group.rsTabsReady;
     });
-
-    window.addEventListener("resize", function () {
-      states.forEach(setMobileMode);
-    });
-
-    ready = true;
-    return true;
+    return ready;
   }
 
   function injectStyles() {
@@ -882,7 +1351,12 @@
         return '.rmwidget[data-id="' + id + '"], .animation-container:has(.rmwidget[data-id="' + id + '"]) { display: none !important; }';
       }).join("\n"),
       HERO_UNDER_BACKGROUND_WIDGET_IDS.map(function (id) {
-        return '.rmwidget[data-id="' + id + '"], .animation-container:has(.rmwidget[data-id="' + id + '"]) { z-index: 299 !important; }';
+        return '.rmwidget[data-id="' + id + '"], .animation-container:has(.rmwidget[data-id="' + id + '"]) { z-index: 299 !important; pointer-events: none !important; }';
+      }).join("\n"),
+      groups.map(function (group) {
+        return group.prev.concat(group.next, [group.pager]).map(function (id) {
+          return '.rmwidget[data-id="' + id + '"], .animation-container:has(.rmwidget[data-id="' + id + '"]) { z-index: 5000 !important; pointer-events: auto !important; }';
+        }).join("\n");
       }).join("\n"),
       ".rs-tabs-arrow { -webkit-tap-highlight-color: transparent !important; outline: none !important; }",
       ".rs-tabs-arrow, .rs-tabs-arrow * { -webkit-tap-highlight-color: transparent !important; }",
@@ -891,12 +1365,15 @@
       ".rs-tabs-arrow-icon { cursor: pointer; opacity: .8 !important; transition: opacity 180ms ease !important; }",
       ".rs-tabs-arrow-icon svg, .rs-tabs-arrow-icon svg * { transition: fill 180ms ease, opacity 180ms ease !important; }",
       ".rs-tabs-arrow-icon svg, .rs-tabs-arrow-icon svg path { fill: #ffffff !important; }",
-      ".rs-tabs-arrow-icon:hover, .rs-tabs-arrow-icon:focus { opacity: 1 !important; filter: none !important; outline: none !important; }",
+      ".rs-tabs-arrow-icon:hover, .rs-tabs-arrow-icon:focus, .rs-tabs-arrow-icon.rs-tabs-arrow-hover { opacity: 1 !important; filter: none !important; outline: none !important; }",
       ".rs-tabs-arrow-icon:active { opacity: 1 !important; filter: none !important; }",
-      ".rs-tabs-arrow-icon:active svg, .rs-tabs-arrow-icon:active svg path { fill: #db7031 !important; }",
+      ".rs-tabs-arrow-icon:active svg, .rs-tabs-arrow-icon:active svg path, .rs-tabs-arrow-icon.rs-tabs-arrow-pressed svg, .rs-tabs-arrow-icon.rs-tabs-arrow-pressed svg path { fill: #db7031 !important; }",
+      ".rs-tabs-arrow-overlay { position: fixed; z-index: 7000; display: block; padding: 0; border: 0; border-radius: 0; background: transparent; appearance: none; -webkit-appearance: none; cursor: pointer; pointer-events: auto; -webkit-tap-highlight-color: transparent; outline: none; }",
+      ".rs-tabs-debug { position: fixed; left: 12px; bottom: 12px; z-index: 20000; width: min(520px, calc(100vw - 24px)); max-height: 42vh; margin: 0; padding: 10px 12px; overflow: auto; border: 1px solid rgba(255,255,255,.35); border-radius: 6px; background: rgba(0,0,0,.78); color: #fff; font: 12px/1.35 Menlo, Consolas, monospace; white-space: pre-wrap; pointer-events: none; }",
+      ".rs-tabs-pager, .rs-tabs-arrow, .animation-container:has(.rs-tabs-pager), .animation-container:has(.rs-tabs-arrow) { z-index: 1205 !important; pointer-events: auto !important; }",
       ".rs-tabs-pager-dot { cursor: pointer; display: inline-block; min-width: 1em; text-align: center; -webkit-tap-highlight-color: transparent; transition: color 220ms ease, opacity 220ms ease; }",
       ".rs-tabs-pager-dot:hover, .rs-tabs-pager-dot:focus { color: #db7031 !important; opacity: 1; outline: none; }",
-      "@media (max-width: 639px) { .rmwidget[data-id='6a16be9fa18ff42d8f2428d8'], .animation-container:has(.rmwidget[data-id='6a16be9fa18ff42d8f2428d8']) { width: 74px !important; overflow: visible !important; } .rmwidget[data-id='6a16be9fa18ff42d8f2428d8'] .text-viewer, .rmwidget[data-id='6a16be9fa18ff42d8f2428d8'] .text-viewer p { width: 74px !important; max-width: none !important; overflow: visible !important; white-space: nowrap !important; } .rmwidget[data-id='6a16be9fa18ff42d8f2428d8'] .text-viewer p { display: flex !important; flex-direction: row !important; align-items: center !important; justify-content: center !important; gap: 7px !important; } .rmwidget[data-id='6a16be9fa18ff42d8f2428d8'] .rs-tabs-pager-dot { display: inline-flex !important; align-items: center !important; justify-content: center !important; min-width: 18px !important; } }",
+      "@media (max-width: 639px) { .rs-tabs-pager, .animation-container:has(.rs-tabs-pager) { width: 74px !important; overflow: visible !important; } .rs-tabs-pager .text-viewer, .rs-tabs-pager .text-viewer p { width: 74px !important; max-width: none !important; overflow: visible !important; white-space: nowrap !important; } .rs-tabs-pager .text-viewer p { display: flex !important; flex-direction: row !important; align-items: center !important; justify-content: center !important; gap: 7px !important; } .rs-tabs-pager .rs-tabs-pager-dot { display: inline-flex !important; align-items: center !important; justify-content: center !important; min-width: 18px !important; } .animation-container:has(.rs-tabs-title) { pointer-events: none !important; } }",
       ".rs-tabs-title, .rs-tabs-title * { overflow: visible !important; }",
       ".rs-tabs-title .common-button, .rs-tabs-title .text { width: 100% !important; max-width: none !important; text-align: center !important; white-space: nowrap !important; }",
       ".rs-tabs-panel .text-viewer, .rs-tabs-panel .text-viewer *, .rs-tabs-panel-shell .text-viewer, .rs-tabs-panel-shell .text-viewer * { color: #ffffff !important; }",
@@ -933,16 +1410,32 @@
     if (tabsDone && filmDone && backgroundDone) return;
 
     var attempts = 0;
+    var scheduleTabsInit = function () {
+      if (ready) return;
+      init();
+      window.setTimeout(init, 120);
+    };
+    var observer;
     var timer = window.setInterval(function () {
       attempts += 1;
       tabsDone = ready || init();
       filmDone = filmReady || initFilmPlayer();
       backgroundDone = backgroundDone || initRepeatingBackground();
 
-      if ((tabsDone && filmDone && backgroundDone) || attempts >= 40) {
+      if ((tabsDone && filmDone && backgroundDone) || attempts >= 160) {
         window.clearInterval(timer);
+        if (observer) observer.disconnect();
       }
     }, 250);
+    if (window.MutationObserver) {
+      observer = new MutationObserver(scheduleTabsInit);
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+    }
+    window.addEventListener("scroll", scheduleTabsInit, { passive: true });
+    window.addEventListener("resize", scheduleTabsInit);
   }
 
   if (document.readyState === "loading") {
