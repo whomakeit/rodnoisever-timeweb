@@ -1,2 +1,4 @@
 User-agent: *
-Sitemap: https://whmkst.com/sitemap.xml
+Allow: /
+
+Sitemap: https://e-plus.media/sitemap.xml

@@ -1,1 +1,0 @@
-import{a as r,f as i}from"https://st-p.rmcdn1.net/d80c3311/dist/c/c-L2TOXWXI.js";var s,t,n=r(()=>{"use strict";s=class{constructor(){i(this,"permissions");this.permissions={}}init(e){this.permissions=e}getPermissions(){return this.permissions||{}}},t=new s});export{t as a,n as b};

@@ -14,3 +14,10 @@
   src: url("../fonts/6a05bf853be8953e7ea43416_n5.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: 'custom_184208';
+  font-style:  normal;
+  font-weight: 700;
+  src: url("../fonts/6a05bf853be8953e7ea43416_n7.otf") format("opentype");
+}
+
