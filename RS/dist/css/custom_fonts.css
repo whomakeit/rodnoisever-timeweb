@@ -5,6 +5,7 @@
   font-style:  normal;
   font-weight: 400;
   src: url("../fonts/6a05bf853be8953e7ea43416_n4.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
   font-style:  normal;
   font-weight: 500;
   src: url("../fonts/6a05bf853be8953e7ea43416_n5.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -19,5 +21,5 @@
   font-style:  normal;
   font-weight: 700;
   src: url("../fonts/6a05bf853be8953e7ea43416_n7.otf") format("opentype");
+  font-display: swap;
 }
-
